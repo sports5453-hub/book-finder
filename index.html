@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f3ea" />
+    <title>Book Finder</title>
+    <link rel="preconnect" href="https://openlibrary.org" />
+    <link rel="preconnect" href="https://covers.openlibrary.org" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="finder" aria-labelledby="app-title">
+        <div class="panel intro-panel">
+          <div class="brand-row">
+            <div class="mark" aria-hidden="true">BF</div>
+            <div>
+              <p class="eyebrow">Personal book matching</p>
+              <h1 id="app-title">Book Finder</h1>
+            </div>
+          </div>
+
+          <div class="cover-stack" aria-hidden="true">
+            <img
+              src="https://covers.openlibrary.org/b/id/10523338-L.jpg"
+              alt=""
+              class="cover cover-one"
+            />
+            <img
+              src="https://covers.openlibrary.org/b/id/8231856-L.jpg"
+              alt=""
+              class="cover cover-two"
+            />
+            <img
+              src="https://covers.openlibrary.org/b/id/12646802-L.jpg"
+              alt=""
+              class="cover cover-three"
+            />
+          </div>
+        </div>
+
+        <div class="panel quiz-panel">
+          <div class="progress-wrap">
+            <div class="progress-copy">
+              <span id="stepLabel">Question 1 of 6</span>
+              <strong id="stepTitle">What kind of story sounds right?</strong>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+          </div>
+
+          <form id="quizForm" class="quiz-form">
+            <fieldset class="question active" data-step="0">
+              <legend>What kind of story sounds right?</legend>
+              <div class="option-grid">
+                <label class="option">
+                  <input type="checkbox" name="genre" value="fantasy" />
+                  <span>Fantasy or mythic worlds</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="science_fiction" />
+                  <span>Science fiction or future ideas</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="mystery" />
+                  <span>Mystery, thriller, or crime</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="romance" />
+                  <span>Romance or relationships</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="historical_fiction" />
+                  <span>History through a story</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="literary_fiction" />
+                  <span>Realistic, character-driven fiction</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="biography" />
+                  <span>Real people and true lives</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="genre" value="self_help" />
+                  <span>Ideas that improve my life</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question" data-step="1">
+              <legend>What mood do you want after a few chapters?</legend>
+              <div class="option-grid">
+                <label class="option">
+                  <input type="radio" name="mood" value="cozy" />
+                  <span>Comforted and relaxed</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="mood" value="tense" />
+                  <span>Hooked and on edge</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="mood" value="wonder" />
+                  <span>Curious and transported</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="mood" value="emotional" />
+                  <span>Moved by deep feelings</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="mood" value="thoughtful" />
+                  <span>Challenged to think</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question" data-step="2">
+              <legend>How should the book move?</legend>
+              <div class="option-grid compact">
+                <label class="option">
+                  <input type="radio" name="pace" value="fast" />
+                  <span>Fast and plot-heavy</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="pace" value="balanced" />
+                  <span>Balanced plot and reflection</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="pace" value="slow" />
+                  <span>Slow, layered, and immersive</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question" data-step="3">
+              <legend>Pick the themes that pull you in.</legend>
+              <div class="option-grid">
+                <label class="option">
+                  <input type="checkbox" name="theme" value="adventure" />
+                  <span>Adventure and survival</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="theme" value="family" />
+                  <span>Family, friendship, belonging</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="theme" value="power" />
+                  <span>Power, politics, injustice</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="theme" value="identity" />
+                  <span>Identity and growing up</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="theme" value="knowledge" />
+                  <span>Big ideas and discovery</span>
+                </label>
+                <label class="option">
+                  <input type="checkbox" name="theme" value="love" />
+                  <span>Love, heartbreak, desire</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question" data-step="4">
+              <legend>What reading experience fits your schedule?</legend>
+              <div class="option-grid compact">
+                <label class="option">
+                  <input type="radio" name="length" value="short" />
+                  <span>Short or easy to finish</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="length" value="medium" />
+                  <span>A normal-sized book</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="length" value="long" />
+                  <span>I want something big</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question" data-step="5">
+              <legend>Any favorite book, author, movie, or topic?</legend>
+              <label class="text-entry">
+                <span>Optional, but it sharpens the match.</span>
+                <input
+                  type="text"
+                  name="inspiration"
+                  inputmode="search"
+                  autocomplete="off"
+                  placeholder="Example: Percy Jackson, Agatha Christie, basketball, climate"
+                />
+              </label>
+            </fieldset>
+
+            <div class="controls">
+              <button class="secondary" type="button" id="backBtn">Back</button>
+              <button class="primary" type="button" id="nextBtn">Next</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="resultsSection" class="results-section" aria-live="polite">
+        <div class="results-head">
+          <div>
+            <p class="eyebrow">Ranked recommendations</p>
+            <h2>Your closest matches</h2>
+          </div>
+          <button id="restartBtn" class="secondary" type="button">Retake</button>
+        </div>
+        <div id="status" class="status" hidden></div>
+        <div id="results" class="results-grid"></div>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
