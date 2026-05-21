@@ -485,7 +485,7 @@ button:focus-visible {
   }
 
   .intro-panel {
-    min-height: 210px;
+    min-height: 330px;
   }
 
   .brand-row {
@@ -498,7 +498,29 @@ button:focus-visible {
   }
 
   .cover-stack {
-    display: none;
+    display: block;
+    height: 140px;
+    margin-top: 16px;
+  }
+
+  .cover {
+    width: 88px;
+  }
+
+  .cover-one {
+    left: 2%;
+    bottom: 0;
+  }
+
+  .cover-two {
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%) rotate(2deg);
+  }
+
+  .cover-three {
+    right: 2%;
+    bottom: 0;
   }
 
   .progress-copy {
