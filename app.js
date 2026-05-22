@@ -2,7 +2,7 @@ const questions = [
   "What kind of story sounds right?",
   "What mood do you want after a few chapters?",
   "How should the book move?",
-  "Pick the themes that pull you in.",
+  "Pick the themes that GENUINELY pull you in.",
   "What reading experience fits your schedule?",
   "Any favorite book, author, movie, or topic?",
 ];
